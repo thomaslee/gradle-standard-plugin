@@ -1,0 +1,10 @@
+/.gradle
+*.iws
+*.iml
+*.ipr
+*.swp
+*.bak
+*.jar
+/build
+/*/build
+

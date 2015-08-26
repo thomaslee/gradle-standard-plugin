@@ -1,0 +1,6 @@
+dependencies {
+    runtime "ch.qos.logback:logback-core:${project['logback.version']}"
+    runtime "org.slf4j:log4j-over-slf4j:${project['slf4j.version']}"
+    runtime "org.slf4j:jcl-over-slf4j:${project['slf4j.version']}"
+}
+
