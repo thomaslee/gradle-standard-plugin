@@ -1,6 +1,30 @@
-dependencies {
-    runtime "ch.qos.logback:logback-core:${project['logback.version']}"
-    runtime "org.slf4j:log4j-over-slf4j:${project['slf4j.version']}"
-    runtime "org.slf4j:jcl-over-slf4j:${project['slf4j.version']}"
+plugins {
+    id 'com.gradle.plugin-publish' version '0.9.1'
+}
+
+pluginBundle {
+    website = "https://github.com/thomaslee/gradle-standard-plugin/"
+    vcsUrl = "https://github.com/thomaslee/gradle-standard-plugin/"
+    description = "Standard Gradle boilerplate for my personal projects"
+    tags = ['standards', 'java', 'logging', 'idea']
+
+    plugins {
+        standardIdeaPlugin {
+            id = 'co.tomlee.standard.idea'
+            displayName = "My IntelliJ Boilerplate"
+        }
+        standardJavaLoggingPlugin {
+            id = 'co.tomlee.standard.java.logging'
+            displayName = "My Java Logging Boilerplate"
+        }
+        standardJavaLibraryPlugin {
+            id = 'co.tomlee.standard.java.library'
+            displayName = "My Java Library Boilerplate"
+        }
+        standardJavaToolPlugin {
+            id = 'co.tomlee.standard.java.tool'
+            displayName = "My Java Tool Boilerplate"
+        }
+    }
 }
 

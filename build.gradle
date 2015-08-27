@@ -1,13 +1,16 @@
 allprojects {
     apply plugin: 'java'
+    apply plugin: 'groovy'
     apply plugin: 'idea'
 
     repositories {
-        mavenCentral()
+        jcenter()
     }
 
     dependencies {
-        compile "org.slf4j:slf4j-api:${project['slf4j.version']}"
+        compile gradleApi()
+        compile localGroovy()
+        compile "com.github.jengelman.gradle.plugins:shadow:${project['shadowJar.version']}"
 
         testCompile "junit:junit:${project['junit.version']}"
         testCompile "org.mockito:mockito-core:${project['mockito.version']}"
